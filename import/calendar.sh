@@ -2,7 +2,8 @@
 # Backup Script
 # backup Zimbra Files
 # Dont forget to install zsh and set the ZCSACCOUNT
-# (c) 2014 by virtualmarc @ GitHub
+# (c) 2013 by virtualmarc @ GitHub
+# Thanks to: lukas2511 @ GitHub
 
 ZCSACCOUNT="user@domain.tld"
 
