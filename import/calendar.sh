@@ -7,8 +7,9 @@
 
 ZCSACCOUNT="user@domain.tld"
 
-echo "Deleting all Calendar entries"
-zmmailbox -z -m $ZCSACCOUNT ef /Calendar
+# Remove comment to delete all calendar entries before import!
+#echo "Deleting all Calendar entries"
+#zmmailbox -z -m $ZCSACCOUNT ef /Calendar
 
 function newName()
 {
