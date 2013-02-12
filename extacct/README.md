@@ -1,4 +1,4 @@
-ZimbraTools: SYSTEM
+ZimbraTools: External Accounts
 ===========
 
 This scripts configure Zimbra to send from external accounts!

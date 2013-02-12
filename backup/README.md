@@ -1,4 +1,4 @@
-ZimbraTools: SYSTEM
+ZimbraTools: BACKUPS
 ===========
 
 This is a backup tool!
