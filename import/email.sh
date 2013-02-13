@@ -28,14 +28,13 @@ do
                 fi
                 echo "Creating Folder: $NEWFOLDER"
                 ZCSPATH=${NEWFOLDER#"."}
-                IFS=$'/'
-                for path in $ZCSPATH
+                arr=$(echo $ZCSPATH | tr "/" "\n")
+                for path in $arr
                 do
                         echo "Creating Path: $TMPPATH/$PATH"
                         echo createFolder $TMPPATH/$PATH | zmmailbox -z -m $ZCSACCOUNT
                         TMPPATH=$TMPPATH/$PATH
                 done
-                IFS=$'\n'
                 for file in $(find $NEWFOLDER)
                 do
                         FILENAME=${file#"$NEWFOLDER/"}
