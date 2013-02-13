@@ -1,6 +1,6 @@
 #!/bin/zsh
-# Backup Script
-# backup Zimbra Files
+# Import Script
+# Import .ics Calendar files
 # Dont forget to install zsh and set the ZCSACCOUNT
 # (c) 2013 by virtualmarc @ GitHub
 # Thanks to: lukas2511 @ GitHub
