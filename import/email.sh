@@ -15,7 +15,6 @@ function newName()
 
 echo "Beginning Import"
 IFS=$'\n'
-CURDIR='/'
 for folder in $(find . -type d)
 do
         if [ "$folder" != "." ]
@@ -32,7 +31,8 @@ do
                 IFS=$'/'
                 for path in $ZCSPATH
                 do
-                        echo createFolder $TMPPATH$PATH | zmmailbox -z -m $ZCSACCOUNT
+                        echo "Creating Path: $TMPPATH/$PATH"
+                        echo createFolder $TMPPATH/$PATH | zmmailbox -z -m $ZCSACCOUNT
                         TMPPATH=$TMPPATH/$PATH
                 done
                 IFS=$'\n'
