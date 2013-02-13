@@ -27,9 +27,11 @@ do
                         mv "$folder" $NEWFOLDER
                 fi
                 echo "Creating Folder: $NEWFOLDER"
-                ZCSPATH=${NEWFOLDER#"."}
-                arr=$(echo $ZCSPATH | tr "/" "\n")
-                for TPATH in $arr
+                ZCSPATH=${NEWFOLDER#"./"}
+                echo "ZCS Path: $ZCSPATH"
+                TMPPATH=""
+                IFS='/'
+                for TPATH in $ZCSPATH
                 do
                         if [ $TPATH != "" ]
                         then
@@ -38,6 +40,7 @@ do
                                 TMPPATH=$TMPPATH/$TPATH
                         fi
                 done
+                IFS=$'\n'
                 for file in $(find $NEWFOLDER)
                 do
                         FILENAME=${file#"$NEWFOLDER/"}
