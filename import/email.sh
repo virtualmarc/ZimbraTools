@@ -29,11 +29,14 @@ do
                 echo "Creating Folder: $NEWFOLDER"
                 ZCSPATH=${NEWFOLDER#"."}
                 arr=$(echo $ZCSPATH | tr "/" "\n")
-                for path in $arr
+                for TPATH in $arr
                 do
-                        echo "Creating Path: $TMPPATH/$PATH"
-                        echo createFolder $TMPPATH/$PATH | zmmailbox -z -m $ZCSACCOUNT
-                        TMPPATH=$TMPPATH/$PATH
+                        if [ $TPATH != "" ]
+                        then
+                                echo "Creating Path: $TMPPATH/$TPATH"
+                                echo createFolder $TMPPATH/$TPATH | zmmailbox -z -m $ZCSACCOUNT
+                                TMPPATH=$TMPPATH/$TPATH
+                        fi
                 done
                 for file in $(find $NEWFOLDER)
                 do
